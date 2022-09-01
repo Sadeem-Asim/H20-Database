@@ -9,10 +9,10 @@ mongoose
   .connect(
     "mongodb+srv://hash2o:hash2o@hash2o-instance.upnuf.mongodb.net/?retryWrites=true&w=majority",
     {
-      useNewUrlParser: true,
-      useCreateIndex: true,
+      // useNewUrlParser: true,
+      // useCreateIndex: true,
+      // useFindAndModify: false,
       useUnifiedTopology: true,
-      useFindAndModify: false,
     }
   )
   .then(() => {
