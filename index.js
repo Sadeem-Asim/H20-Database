@@ -13,7 +13,7 @@ app.use(function (req, res, next) {
   res.setHeader("Access-Control-Allow-Credentials", true);
   res.setHeader(
     "Access-Control-Allow-Methods",
-    "GET, POST, OPTIONS, PUT, PATCH, DELETE",
+    "GET, POST, OPTIONS, PUT, PATCH, DELETE"
   );
 
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -21,14 +21,14 @@ app.use(function (req, res, next) {
   // Request headers you wish to allow
   res.setHeader(
     "Access-Control-Allow-Headers",
-    "X-Requested-With,content-type",
+    "X-Requested-With,content-type"
   );
   // Set to true if you need the website to include cookies in the requests sent
   // to the API (e.g. in case you use sessions)
   // res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
   res.setHeader(
     "Content-Security-Policy",
-    "script-src 'self' https://cdnjs.cloudflare.com",
+    "script-src 'self' https://cdnjs.cloudflare.com"
   );
   next();
 });
@@ -37,17 +37,14 @@ app.use(
   cors({
     origin: "http://localhost:3005",
     credentials: true,
-  }),
+  })
 );
 
 // Connecting Database
 mongoose
-  .connect(
-    "mongodb+srv://hash2o:hash2o@hash2o-instance.upnuf.mongodb.net/?retryWrites=true&w=majority",
-    {
-      useUnifiedTopology: true,
-    },
-  )
+  .connect("https://localhost/27017/hash20", {
+    useUnifiedTopology: true,
+  })
   .then(() => {
     console.log("DB Connection Successful");
   });
